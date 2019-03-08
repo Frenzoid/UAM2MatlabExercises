@@ -136,5 +136,5 @@ subplot(2,1,2); ezcontour(f);
 
 % Ejercicio 16.
 blkdiag(randi([2,10]),randi([2,10]),randi([2,10]),randi([2,10]),randi([2,10]),randi([2,10]))
-% blkdiag crea una matriz con unos numeros especicos en la diagonal, el resto de numeros de la matriz (los que no son de la diagonal) serán ceros.
+% blkdiag crea una matriz con unos numeros especificos en la diagonal, el resto de numeros de la matriz (los que no son de la diagonal) serán ceros.
 % randi devuelve un numero aleatorio, si se quiere especificar el rango, solo hay que poner el min / max entre corchetes.
