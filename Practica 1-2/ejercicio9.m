@@ -1,4 +1,4 @@
-function outputValue = ejercicio9()
+function outputValue = ejercicio9() % outputValue es la variable de salida (puede tener cualquier otro nombre).
 % Ejercicio 9.
 
   n = input('Dime hasta que numero: ')
@@ -10,6 +10,6 @@ function outputValue = ejercicio9()
     r = i ^ 2 + r;
   end
 
-  outputValue = r;
+  outputValue = r; 
 
 end
