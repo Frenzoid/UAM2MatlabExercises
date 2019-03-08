@@ -10,5 +10,5 @@ areaCirculo = pi * r^2;
 areaCilindro = (areaCirculo * 2) + areaRectangulo; % Sumamos el area de los dos circulos, y el area del lado (que al fin y al cabo es un rectangulo)
 volumenCilindro = areaCirculo * h;
 
-volumenCilindro;
-areaCilindro;
+fprintf("El area es: %.2f, y el volumen es %.2f \n", areaCilindro, volumenCilindro)
+
