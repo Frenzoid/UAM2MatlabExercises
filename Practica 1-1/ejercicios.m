@@ -6,6 +6,7 @@ sqrt(5)
 
 clear
 
+
 % Ejercicio 2.
 x = 2/3;
 z = 20/3;
@@ -27,6 +28,8 @@ p
 n
 
 clear
+
+
 % Ejercicio 3.
 help num2str
 
@@ -39,6 +42,7 @@ plot(x2, sin(x2))
 
 clear
 
+
 % Ejercicio 5.
 x = 1.4 * 10^154;
 b = 1.3 * 10^154;
@@ -46,6 +50,7 @@ b = 1.3 * 10^154;
 a^2 - b^2
 % No elevandolo al cuadrado.
 clear
+
 
 % Ejercicio 6.
 x = 10/7
@@ -56,16 +61,19 @@ double(y) = 5
 
 clear
 
+
 % Ejercicio 7.
 sacaHipo = @(x,y) sqrt(x^2 + y^2)
 sacaHipo(15, 5)
 
 clear
 
+
 % Ejercicio 8.
 sqrt(5^2 + 7^2 - 2*5*7*cos(pi/6))
 
 clear
+
 
 % Ejercicio 9.
 solve((x^3 + 1)^2)
@@ -74,6 +82,7 @@ factor(x^3 + x^2 - x - 1)
 pretty((x^3 - 1)^2)
 
 clear
+
 
 % Ejercicio 11.
 syms x y;
@@ -102,6 +111,7 @@ xlabel('tiempo'); ylabel('altura')
 
 clear;
 
+
 % Ejercicio 12.
 syms x;
 ezplot(sin(x), [-3 pi, pi])
@@ -109,11 +119,13 @@ ezplot(cos(x), [-3 pi, pi])
 
 clear;
 
+
 % Ejercicio 13.
 M = [1:3, 4:6]
 M2 = repmat(0, 2,3) % Crea una matriz de 0, de dimensiones 2 x 3.
 
 clear;
+
 
 % Ejercicio 14.
 M1 = (1:5)
@@ -126,6 +138,7 @@ M1.*2;
 M2./2;
 
 clear;
+
 
 % Ejercicio 15.
 syms x y;
