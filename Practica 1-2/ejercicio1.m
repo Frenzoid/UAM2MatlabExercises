@@ -12,3 +12,4 @@ volumenCilindro = areaCirculo * h;
 
 fprintf("El area es: %.2f, y el volumen es %.2f \n", areaCilindro, volumenCilindro)
 
+clear;
