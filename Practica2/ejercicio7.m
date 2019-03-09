@@ -56,4 +56,4 @@ disp(f1);
 
 criticos = solve(f1 == 0);
 
-fprintf('El minimo es: %f', criticos);
+fprintf('El la dimension minima es: %f', criticos);
