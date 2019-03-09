@@ -31,7 +31,11 @@
     % 120*x - 800/x^-2;
 
 % Igualamos a 0 y despejamos:
-    % raiz cubica de 80/12.
+    % 120x = 800 * x^2; -> Dividimos todo entre 10.
+    % 12x = 80 * x^-2; -> Multiplicamos todo pod x^2 para quitarnos el x^-2
+    % 12x^3 = 80 -> Pasamos el 12 dividiendo.
+    % x^3 = 80/12
+    % x = raiz cubica de 80/12.
 
 syms x y;
 
