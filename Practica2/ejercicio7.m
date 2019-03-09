@@ -35,7 +35,10 @@
     % 12x = 80 * x^-2; -> Multiplicamos todo pod x^2 para quitarnos el x^-2
     % 12x^3 = 80 -> Pasamos el 12 dividiendo.
     % x^3 = 80/12
-    % x = raiz cubica de 80/12.
+    % x = cubica √(80/12).
+    
+% El punto critico es: cubica √(80/12), esa es la dimension que tendria que
+% tener la caja para un coste minimo.
 
 syms x y;
 
