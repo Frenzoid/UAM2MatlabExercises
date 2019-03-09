@@ -1,7 +1,7 @@
 % Ejercicio 6.
 syms x;
-funciones = [(2*x)/(x^2+1), log(x)/(x), (x + 1)/(sqrt(x - 1) - 5), ((x^3)/(x-1)^2)-8];
-den = [(x^2+1), (x), (sqrt(x-1)-5), (x-1)^2-8];
+funciones = [(2*x)/(x^2+1), log(x)/(x), (x + 1)/(sqrt(x - 1) - 5), ((x^3)/(x-1)^2)-8]; % Funciones a analizar.
+den = [(x^2+1), (x), (sqrt(x-1)-5), (x-1)^2-8]; % Denominadores de las funciones a analizar.
 
 % POR CADA FUNCION %
 for f = 1 : length(funciones)
@@ -19,8 +19,9 @@ for f = 1 : length(funciones)
 
 	% Comprobamos si son reales, mostramos la representación. !ATENCIÓN¡: Es posible que salga mas de un punto critico (vector de puntos).
 	for i = 1:size(denSolv)
+		% POR CADA ASINTOTA %
 		disp(denSolv(i));
-		if isreal(denSolv(i))
+		if isreal(denSolv(i)) % La imprimimos solo si es real.
 			plot([denSolv(i), denSolv(i)], [-100, 100]); % Envez de -100 y 100 tendria que ser -inf y inf, pero no funciona (por arreglar).
 		end
 	end
