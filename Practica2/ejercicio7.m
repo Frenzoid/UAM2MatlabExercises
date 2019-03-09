@@ -52,4 +52,6 @@ f1 = diff(f);
 
 criticos = solve(f1 == 0);
 
-fprintf('El la dimension minima es: %f', criticos);
+fprintf('El la dimension minima es: %f', criticos); 
+
+% Este creo que no lo tengo bien.
