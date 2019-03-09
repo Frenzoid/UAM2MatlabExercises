@@ -49,7 +49,7 @@ f1 = simplify(f1);
 criticos = solve(f1 == 0); % !ATENCIÓN¡: Es posible que salga mas de un punto critico (vector de puntos).
 
 
-% ------ e) > Para ver si es un maximo o mınimo se necesita el signo de
+% ------ g) > Para ver si es un maximo o mınimo se necesita el signo de
 % la segunda derivada.
 
 f2 = simplify(diff(f, 2));
@@ -78,3 +78,11 @@ f2 = simplify(diff(f, 2));
             end
         end
     end
+    
+    
+% ------ h) > Y sacamos la concavidad usando el signo de la segunda derivada.
+% La concavidad la hacemos en una ventana aparte.
+hold off;
+
+figure();
+ezplot(sign(f2), [5,-5]);
