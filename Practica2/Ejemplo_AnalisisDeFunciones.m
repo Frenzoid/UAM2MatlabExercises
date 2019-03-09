@@ -65,9 +65,7 @@ f2 = simplify(diff(f, 2));
         % neg.
 
         plot(criticos(i), f(criticos(i)), 'ro');
-        
-        title('Analisis de la funcion');
-        
+                
         if f2solv > 0
             text(criticos(i), subs(f, criticos(i)), 'Minimo relativo');
         else
