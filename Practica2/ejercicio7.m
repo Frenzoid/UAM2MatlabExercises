@@ -45,14 +45,10 @@ syms x y;
 bases = 10 * (3 * x^2 * 2);
 lados = 6 * (3 * x * y * 2 + x * y * 2);
 
-bases = simplify(bases);
-lados = simplify(lados);
-
 f = bases + lados;
 f = subs(f, y, (50 / (3 * x^2)));
 
 f1 = diff(f);
-disp(f1);
 
 criticos = solve(f1 == 0);
 
