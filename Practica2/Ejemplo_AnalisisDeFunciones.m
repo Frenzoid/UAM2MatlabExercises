@@ -15,7 +15,6 @@ f(x) = numerador/denominador;
 
 % ------ b) > Mostramos la representación grafica de la función.
 ezplot(f);
-title('Analisis de la funcion');
 hold on; % Si queremos sobreponer el resto de graficos.
 
 
@@ -54,29 +53,30 @@ criticos = solve(f1 == 0); % !ATENCIÓN¡: Es posible que salga mas de un punto 
 
 f2 = simplify(diff(f, 2));
 
-    for i = 1:length(criticos)
-    % POR CADA PUNTO CRITICO %
-        % Resolvemos igualando la segunda derivada a 0, y vemos si es positivo o
-        % negativo.
+for i = 1:length(criticos)
+% POR CADA PUNTO CRITICO %
+    % Resolvemos igualando la segunda derivada a 0, y vemos si es positivo o
+    % negativo.
 
-        f2solv = subs(f2, criticos(i));
+    f2solv = subs(f2, criticos(i));
 
-        % Una vez sabemos si es min o max, dibujamos dependiendo de si es pos o
-        % neg.
+    % Una vez sabemos si es min o max, dibujamos dependiendo de si es pos o
+    % neg.
 
-        plot(criticos(i), f(criticos(i)), 'ro');
-                
-        if f2solv > 0
-            text(criticos(i), subs(f, criticos(i)), 'Minimo relativo');
+    plot(criticos(i), f(criticos(i)), 'ro');
+
+    if f2solv > 0
+        text(criticos(i), subs(f, criticos(i)), 'Minimo relativo');
+    else
+        if f2solv < 0
+            text(criticos(i), subs(f, criticos(i)), 'Maximo relativo');
         else
-            if f2solv < 0
-                text(criticos(i), subs(f, criticos(i)), 'Maximo relativo');
-            else
-                text(criticos(i), subs(f, criticos(i)), 'Punto de Silla');
-            end
+            text(criticos(i), subs(f, criticos(i)), 'Punto de Silla');
         end
     end
-    
+end
+title('Analisis de la funcion');
+
     
 % ------ h) > Y sacamos la concavidad usando el signo de la segunda derivada.
 % La concavidad la hacemos en una ventana aparte.
@@ -84,3 +84,4 @@ hold off;
 
 figure();
 ezplot(sign(f2), [5,-5]);
+title('Concavidad de la funcion');
