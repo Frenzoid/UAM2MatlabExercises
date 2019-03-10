@@ -1,4 +1,5 @@
 function outputValue = a(a, b)
+% Ejercicio 2 / a.
 
     outputValue = false;
 
