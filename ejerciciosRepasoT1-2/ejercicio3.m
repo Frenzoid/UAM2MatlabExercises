@@ -1,3 +1,5 @@
+% Ejercicio 3.
+
 valores = input('Dame la matriz con los 3 valores: ');
 
 max = 0;
