@@ -14,6 +14,9 @@ for f = 1 : length(funciones)
 
 
     % Asintota.----------------------------------------------------------------
+    % Vertical.
+    ezplot(limit(func, inf));
+    
     % Horizontal.
     denSolv = solve(den(f) == 0);
 
