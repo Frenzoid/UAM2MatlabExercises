@@ -29,9 +29,11 @@ denSolv = solve(denominador == 0);
 % Comprobamos si son reales, mostramos la representación. !ATENCIÓN¡: Es posible que salga mas de un punto critico (vector de puntos).
 % POR CADA ASINTOTA %
 for i = 1:size(denSolv)
-    disp(denSolv(i));
     if isreal(denSolv(i))
-        plot([denSolv(i), denSolv(i)], [-100, 100]); % Envez de -100 y 100 tendria que ser -inf y inf, pero no funciona (por arreglar).
+        x = [ denSolv(i), denSolv(i)];
+        y = [ -100, 100];
+        
+        plot(x,y);
     end
 end
 
@@ -86,3 +88,4 @@ hold off;
 figure();
 ezplot(sign(f2), [5,-5]);
 title('Concavidad de la funcion');
+
