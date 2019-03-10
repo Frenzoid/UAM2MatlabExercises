@@ -28,7 +28,7 @@ denSolv = solve(denominador == 0);
 
 % Comprobamos si son reales, mostramos la representación. !ATENCIÓN¡: Es posible que salga mas de un punto critico (vector de puntos).
 % POR CADA ASINTOTA %
-for i = 1:size(denSolv)
+for i = 1:length(denSolv)
     if isreal(denSolv(i))
         x = [ denSolv(i), denSolv(i)];
         y = [ -100, 100];
