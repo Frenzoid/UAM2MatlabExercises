@@ -1,3 +1,5 @@
+% Ejercicio 2 / b.
+
 vectorA = input('Dime el primer vector: ');
 vectorB = input('Dime el segundo vector: ');
 
