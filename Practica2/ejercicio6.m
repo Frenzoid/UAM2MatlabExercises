@@ -21,7 +21,7 @@ for f = 1 : length(funciones)
     denSolv = solve(den(f) == 0);
 
 	% Comprobamos si son reales, mostramos la representación. !ATENCIÓN¡: Es posible que salga mas de un punto critico (vector de puntos).
-	for i = 1:size(denSolv)
+	for i = 1:length(denSolv)
 		% POR CADA ASINTOTA %
 		disp(denSolv(i));
 		if isreal(denSolv(i)) % La imprimimos solo si es real.
