@@ -1,3 +1,5 @@
+% Ejercicio 1.
+
 numero = input('Dime un numero: ');
 
 raiz = sqrt(numero);
