@@ -1,7 +1,7 @@
 % Ejercico 9.
 
 syms m b x;
-f(x) = x^2 + 1
+f = x^2 + 1;
 ezplot(f);
 hold on;
 plot(0, 2, 'ro');
@@ -12,7 +12,7 @@ resultados = subs(f, x, numeros);
 minimoIterador = 0;
 minVal = inf;
 
-for i = 1:size(numeros)
+for i = 1:length(numeros)
     if numeros(i) + resultados(i) < minVal
         minimoIterador = i;
         valor = numeros(i) + resultados(i);
