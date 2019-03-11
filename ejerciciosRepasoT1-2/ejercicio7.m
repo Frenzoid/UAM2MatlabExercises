@@ -10,8 +10,6 @@
 % Area total = areaSolar + AreaPation;
 % PrecioTotal = areaTotal * 1000;
 
-syms x y;
-
 areaCasa = 100;
 
 areaPatio = 8 * 10;
@@ -22,6 +20,3 @@ dimensionesSolar = areaCasa + areaPatio;
 coste = 1000 * dimensionesSolar;
 
 fprintf('Dimension minima del solar %.2f y el precio es %.2f \n', dimensionesSolar, coste);
-
-
-% En serio?
