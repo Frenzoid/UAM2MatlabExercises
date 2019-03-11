@@ -1,49 +1,27 @@
-% Ejercico 7.
+% Ejercicio 7.
 
-% Se quiere construir una casa de 100m
-%    con un jardin de 5m de ancho en la parte frontal / trasera
-%    y 4m de ancho en las partes laterales.
+% Nos piden el precio minimo de la dimension del solar.
+%   Ya que ya nos dan medidas fijas, el precio minimo será el
+%   calculo de las areas.
 
-% El precio por m2 es de 1000eur.
+% Area del solar = 100m2.
+% Area del patio = (5+5) * (4+4) = 10 * 8;
 
-% Conclusión: sacar la dimension para el minimo coste posible para la construccion.
-
-% Area de la CASA: 100 = x * y;
-% Area del JARDIN: (x + 8 * y + 10) - x * y;
-% Area del SOLAR (Area total): f(x,y) = x + 8 * y + 10;
-
-% Despejamos y:
-  % (100/x) = y;
-  
-% Substituimos y en f:
-  % x + 8 * (100/x) + 10;
-  
-% Derivamos para sacar el maximo:
-  % 1 - 800/x^2;
-  
-% Igualamos a 0 y despejamos x para sacar los criticos:
-  % 1 - 800 = x^2;
-  % +-√1-800 = x;
-
+% Area total = areaSolar + AreaPation;
+% PrecioTotal = areaTotal * 1000;
 
 syms x y;
 
-areaCasa = 100 == x * y;
+areaCasa = 100;
 
-areaSolar = (x + 8) * (y + 10);
+areaPatio = 8 * 10;
 
-yDespejada = solve(areaCasa, y)
 
-areaSolarSubstituida = simplify(subs(areaSolar, y, yDespejada))
+dimensionesSolar = areaCasa + areaPatio;
 
-areaSolarDerivada = simplify(diff(areaSolarSubstituida))
+coste = 1000 * dimensionesSolar;
 
-criticos = simplify(solve(areaSolarDerivada == 0))
+fprintf('Dimension minima del solar %.2f y el precio es %.2f \n', dimensionesSolar, coste);
 
-disp(min(criticos))
 
-precio = subs(areaSolarSubstituida, x, min(criticos)) * 1000
-
-disp(min(precio));
-
-% Creo que está mal.
+% En serio?
