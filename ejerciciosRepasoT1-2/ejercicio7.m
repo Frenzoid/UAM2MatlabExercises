@@ -22,7 +22,8 @@
   % 1 - 800/x^2;
   
 % Igualamos a 0 y despejamos x para sacar los criticos:
-  % (10*(x^2 - 80))/x^2;
+  % 1 - 800 = x^2;
+  % +-√1-800 = x;
 
 
 syms x y;
