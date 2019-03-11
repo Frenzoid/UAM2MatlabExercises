@@ -20,3 +20,6 @@ dimensionesSolar = areaCasa + areaPatio;
 coste = 1000 * dimensionesSolar;
 
 fprintf('Dimension minima del solar %.2f y el precio es %.2f \n', dimensionesSolar, coste);
+
+
+% Tiene sentido?, creo que me he equivocado dando por hecho el area del jardin.
