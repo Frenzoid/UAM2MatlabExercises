@@ -26,7 +26,7 @@ ezplot(limit(f, inf));
 % Resolvemos el denominador y la almacenamos en una variable.
 denSolv = solve(denominador == 0);
 
-% Comprobamos si son reales, mostramos la representación. !ATENCIÓN¡: Es posible que salga mas de un punto critico (vector de puntos).
+% Comprobamos si son reales, mostramos la representación. !ATENCIÓN¡: Es posible que salga mas de una asíntota (vector de puntos).
 % POR CADA ASINTOTA %
 for i = 1:length(denSolv)
     if isreal(denSolv(i))
