@@ -14,7 +14,6 @@ formulaDistancia = sqrt((x - 0)^2 + (y - 2)^2);
 % Substituimos y.
 distancia = subs(formulaDistancia, y, f);
 
-
 % derivamos para ciriticos.
 f1 = simplify(diff(distancia))
 
