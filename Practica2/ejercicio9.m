@@ -1,26 +1,27 @@
-% Ejercico 9.
+syms x y;
 
-syms m b x;
-f = x^2 + 1;
+f(x) = x^2 + 1;
 ezplot(f);
 hold on;
-plot(0, 2, 'ro');
+plot(0, 2, 'ro')
 
-numeros = -10:10;
-resultados = subs(f, x, numeros);
 
-minimoIterador = 0;
-minVal = inf;
+% formula de la diferencia entre 2 puntos: v = (x1 - y1, x2 - y2);
+% formula de la distancia de un vector: raiz((x)2 + (y)^2);
 
-for i = 1:length(numeros)
-    if numeros(i) + resultados(i) < minVal
-        minimoIterador = i;
-        valor = numeros(i) + resultados(i);
-        minVal = valor;
-    end
+formulaDistancia = sqrt((x - 0)^2 + (y - 2)^2);
 
-end
+% Substituimos y.
+distancia = subs(formulaDistancia, y, f);
 
-plot(numeros(minimoIterador), resultados(minimoIterador), 'ro');
 
-% Falta arreglarlo.
+% derivamos para ciriticos.
+f1 = simplify(diff(distancia))
+
+% sacamos criticos.
+criticos = solve(f1 == 0)
+
+% imprimimos criticos.
+for crit = criticos
+    plot(crit, f(crit), 'bo')
+end;
