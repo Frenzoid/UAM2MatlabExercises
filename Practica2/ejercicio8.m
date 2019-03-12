@@ -47,6 +47,6 @@
  
  f1 = diff(f);
  
- critico = solve(f1 == 0);
+ critico = double(solve(f1 == 0));
  
  fprintf('La dimensión máxima es: %f \n', critico);
