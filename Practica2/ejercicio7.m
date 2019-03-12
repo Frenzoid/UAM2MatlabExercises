@@ -50,8 +50,6 @@ f = subs(f, y, (50 / (3 * x^2)));
 
 f1 = diff(f);
 
-criticos = solve(f1 == 0);
+criticos = double(solve(f1 == 0));
 
-fprintf('El la dimension minima es: %f', criticos); 
-
-% Este creo que no lo tengo bien.
+fprintf('El la dimension minima es: %f \n', criticos(1)); 
