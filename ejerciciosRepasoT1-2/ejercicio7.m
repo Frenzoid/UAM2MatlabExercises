@@ -1,8 +1,6 @@
 % Ejercicio 7.
 
-% Nos piden el precio minimo de la dimension del solar.
-%   Ya que ya nos dan medidas fijas, el precio minimo será el
-%   calculo de las areas.
+% Nos piden el precio minimo de la dimension del solar para poder sacar el precio minimo.
 
 % Area casa: 100 = x * y)
 % AreaSolar: (8 + y) * (10 + x);
@@ -40,6 +38,6 @@ fcrits = double(solve(f1 == 0));
 
 fcrits = fcrits(2); % El valor positivo.
 
-disp(fcrits);
+fprintf('Area del solar: %.2f m2, precio del solar %.2f eur. \n',fcrits, subs(f,x,fcrits));
  
     
