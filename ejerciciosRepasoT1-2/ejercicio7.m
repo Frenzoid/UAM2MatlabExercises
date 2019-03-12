@@ -4,22 +4,42 @@
 %   Ya que ya nos dan medidas fijas, el precio minimo será el
 %   calculo de las areas.
 
-% Area del solar = 100m2.
-% Area del patio = (5+5) * (4+4) = 10 * 8;
+% Area casa: 100 = x * y)
+% AreaSolar: (8 + y) * (10 + x);
+% Coste Solar: AreaSolar * 1000;
 
-% Area total = areaSolar + AreaPation;
-% PrecioTotal = areaTotal * 1000;
+% Despejamos y:
+    % 100 / x = y;
+    
+% Substituimos:
+    % (8 + 100 / x) * (10 + x) * 1000;
+    
+% Calculamos;
+    % 80 + 8x + 1000/x + 100 * 1000
+    
+% Derivamos:
+    % 8 - 1000/x^2
+    
+% Igualamos a 0 y sacamos los criticos:
+    % 8 * x^2 = 1000;
+    % x^2 = 1000/8;
+    % x = +raiz(1000/8);
+    
+    
+    
+    
+syms x y;
 
-areaCasa = 100;
+f = (8 + y) * (10 + x) * 1000;
+fy = 100 / x;
 
-areaPatio = 8 * 10;
+f = subs(f, y, fy);
 
+f1 = diff(f);
+fcrits = double(solve(f1 == 0));
 
-dimensionesSolar = areaCasa + areaPatio;
+fcrits = fcrits(2); % El valor positivo.
 
-coste = 1000 * dimensionesSolar;
-
-fprintf('Dimension minima del solar %.2f y el precio es %.2f \n', dimensionesSolar, coste);
-
-
-% Tiene sentido?, creo que me he equivocado dando por hecho el area del jardin.
+disp(fcrits);
+ 
+    
