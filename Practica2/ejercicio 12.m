@@ -1,6 +1,4 @@
 % Ejercicio 11.
-syms x;
-
 fa = @(x) x^2 - 12 * x + 3;
 fb = @(x) x + cos(x^2);
 
