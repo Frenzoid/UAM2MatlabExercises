@@ -99,7 +99,7 @@ end
 
 title([n ," rectangulo/s"]);
 
-% Revisamos que tanto la suma inferior como la superior se aproximan.
+% Y hacemos la suma de izquerda y derecha, y la mostramos.
 f = @(x)x^2 + 1; a = 1; b = 9;
 for k = 0 : 12
     n = 2^k;
@@ -112,6 +112,6 @@ for k = 0 : 12
     
     Ln = h * sum(double(yi(1 : n)));
     Rn = h * sum(double(yi(2 : n + 1)));
-    double([Ln Rn]); pause
+    disp(double([Ln Rn])); pause % Pause fuerza a que el usuario aprete intro por cada iteracion del bucle para avanzar.
 end
 
