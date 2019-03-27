@@ -101,6 +101,7 @@ end
 title([n ," rectangulo/s"]);
 
 % Y hacemos la suma de izquerda y derecha, y la mostramos.
+syms x;
 f = @(x)x^2 + 1;
 
 a = 1;
@@ -120,4 +121,3 @@ for k = 0 : 12
     I = double(int(f(x), a, b));
     disp(double([Ln Rn I])); pause % Pause fuerza a que el usuario aprete intro por cada iteracion del bucle para avanzar.
 end
-
