@@ -52,6 +52,7 @@ n = n * 2;
 % Creamos una matriz que va desde 'a' a 'b', con una longitud de 'n + 1'
 xi = linspace(a, b, n + 1);
 
+
 % Y dibujamos los rectangulos inferiores y superiores n veces.
 for i = 1 : n
     % Primero para el rectangulo inferior.
@@ -100,7 +101,11 @@ end
 title([n ," rectangulo/s"]);
 
 % Y hacemos la suma de izquerda y derecha, y la mostramos.
-f = @(x)x^2 + 1; a = 1; b = 9;
+f = @(x)x^2 + 1;
+
+a = 1;
+b = 9;
+
 for k = 0 : 12
     n = 2^k;
     xi = linspace(a, b, n + 1);
@@ -112,6 +117,7 @@ for k = 0 : 12
     
     Ln = h * sum(double(yi(1 : n)));
     Rn = h * sum(double(yi(2 : n + 1)));
-    disp(double([Ln Rn])); pause % Pause fuerza a que el usuario aprete intro por cada iteracion del bucle para avanzar.
+    I = double(int(f(x), a, b);
+    disp(double([Ln Rn I])); pause % Pause fuerza a que el usuario aprete intro por cada iteracion del bucle para avanzar.
 end
 
