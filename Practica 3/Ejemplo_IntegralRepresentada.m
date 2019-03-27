@@ -51,7 +51,6 @@ n = n * 2;
 
 % Creamos una matriz que va desde 'a' a 'b', con una longitud de 'n + 1'
 xi = linspace(a, b, n + 1);
-)
 
 % Y dibujamos los rectangulos inferiores y superiores n veces.
 for i = 1 : n
