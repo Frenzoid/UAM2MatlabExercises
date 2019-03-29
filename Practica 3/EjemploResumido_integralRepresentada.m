@@ -47,3 +47,5 @@ fprintf('Ln = %.2f, Rn = %.2f, Valor al que se aproxima = %.2f \n', Ln, Rn, I);
 
 % Desanclamos el grafico.
 hold off;
+
+% Y arreando que es tarde!
