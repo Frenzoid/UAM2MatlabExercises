@@ -1,5 +1,3 @@
-syms x;
-
 f = @(x) x.^2 + 1;
 
 a = 1; % Punto inicio de la grafica.
@@ -30,7 +28,7 @@ end
 
 Ln = h * sum(double(yi(1 : n)));
 Rn = h * sum(double(yi(2 : n + 1)));
-I = double(int(f(x), a, b));
+I = double(int(f, a, b));
 
 fprintf('Ln = %.2f, Rn = %.2f, I = %.2f \n', Ln, Rn, I);
 
