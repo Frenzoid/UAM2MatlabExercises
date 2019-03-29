@@ -20,6 +20,9 @@ h = (b - a)/n;
 % Mostramos la grafica.
 ezplot(f, [a, b]); 
 
+% OPCIONAL. (Ajusta la grafica para que se vea mejor respecto a los valor que tenemos).
+axis(double([a - 1, b + 1, 0 f(b + 1)]));
+
 % Anclamos el grafico.
 hold on;
 
