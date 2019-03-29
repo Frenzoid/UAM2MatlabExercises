@@ -23,7 +23,7 @@ for i = 1:n
     plot([xi(i+1) xi(i+1)], double([0 f(xi(i+1))]), 'g');
 end
 
-for i = 1:n+1
+for i = 1:n + 1
     yi(i) = f(xi(i));
 end
 
