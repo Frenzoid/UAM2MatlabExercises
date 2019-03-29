@@ -1,3 +1,9 @@
+% Declaramos x como symbolica 
+%      (aunque f sea una funcion handle, 
+%      la seguimos necesitando para especificar 
+%      que variable itnegrar cuando usemos int).
+syms x;
+
 % La funcion a calcular.
 f = @(x) x.^2 + 1; 
 
