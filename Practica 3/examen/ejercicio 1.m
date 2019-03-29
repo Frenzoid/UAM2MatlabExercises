@@ -1,21 +1,17 @@
 % Calcular el volumen comprendido entre f(x,y) = xy^2 y el plano xy, sobre el rectángulo D {(x,y): 0 < x < 2, 0 < y < 1}.
 % Define f como una función anonima @).
 
-%Ejercicio 1
+% Funcion.
+f = @(x,y) x*y^2;
 
-%El rectangulo con dominio D, siendo un plano XY estando X entre 0 y 2 y estando Y
-%entre 0 y 1
+% Limites de x.
+xa = 0;
+xb = 2;
 
-syms x y;
-f = @(x,y) x*y^2;       %Convertimos en función anónima
 
-%Mínimos y Máximos de X
-a = 0;
-b = 2;
+% Limites de y.
+ya = 0;
+yb = 1;
 
-%Mínimos y Máximos de Y
-c = 0;
-d = 1;
-
-%El volumen es la integral doble
-V = dblquad(f,a,b,c,d);
+% Operacion de integrales dobles, primero se hace la x, y despues la y.
+dblquad(f,xa,xb,ya,yb)
