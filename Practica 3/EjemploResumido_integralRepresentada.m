@@ -48,4 +48,5 @@ fprintf('Ln = %.2f, Rn = %.2f, Valor al que se aproxima = %.2f \n', Ln, Rn, I);
 % Desanclamos el grafico.
 hold off;
 
+% https://www.youtube.com/watch?v=IBDuB3l7ucQ
 % Y arreando que es tarde!
