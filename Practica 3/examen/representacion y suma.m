@@ -1,15 +1,14 @@
 
 syms x;
 f = @(x) x.^2 + 1;
-fexpression = x^2 + 1;
 
 a = 1;
 b = 9;
-n = 4;
+n = 10;
 
 xi = linspace(a, b, n+1);
 
-h = (b - a)/2;
+h = (b - a)/n;
 
 ezplot(f, [a, b]);
 hold on;
@@ -31,6 +30,6 @@ end
 Ln = h * sum(double(yi(1:n)));
 Rn = h * sum(double(yi(1:n + 1)));
 
-I = double(int(fexpression, a, b));
+I = double(int(f, x, a, b));
 
-fprintf('Ln = %.2f, Rn = %.2f, I = %.2f \n', Ln, Rn, I);
+fprintf('Ln = %.2f, Rn = %.2f, Valor al que se aproxima = %.2f \n', Ln, Rn, I);
