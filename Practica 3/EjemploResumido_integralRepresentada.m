@@ -46,7 +46,7 @@ end
 
 % Hacemos los calculos de la izq, y de la derecha.
 Ln = h * sum(double(yi(1:n))); % Nos dará el valor aproximado por la izquierda.
-Rn = h * sum(double(yi(1:n + 1))); % Nos dará el valor aproximado por la derecha.
+Rn = h * sum(double(yi(2:n + 1))); % Nos dará el valor aproximado por la derecha.
 
 % Hacemos el valor exacto con una integral. (nos dará el valor exacto).
 I = double(int(f, x, a, b));
