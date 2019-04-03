@@ -1,4 +1,4 @@
-f = @(x) x.^2 + 1;
+2f = @(x) x.^2 + 1;
 
 a = 1;
 b = 9;
@@ -26,7 +26,7 @@ for i = 1:n + 1
 end
 
 Ln = h * sum(double(yi(1:n)));
-Rn = h * sum(double(yi(1:n + 1)));
+Rn = h * sum(double(yi(2:n + 1)));
 
 I = double(int(f, x, a, b));
 
