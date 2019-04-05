@@ -22,6 +22,6 @@ function outputValue = Secant1(f, a, b, tolerancia, errorfun, maxiter)
         % Descomenta esto para ver los datos en detalle referente al resultado (ULTIMA ITERACION).
         % fprintf('| i |   a  |   c  |   b  |   (b-a)/2  | \n', i, a, c, b, rango); 
         % disp('------------------------------------------');
-        fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, h); 
+        % fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, h); 
         outputValue = c;
 end
