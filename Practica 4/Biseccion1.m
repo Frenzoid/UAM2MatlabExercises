@@ -1,4 +1,4 @@
-function outputValue = Biseccion(f, a, b, tolerancia, errorfun, maxiter)
+function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
     % Ejercicio 1.
     
     % outputValue: Variable de salida.
