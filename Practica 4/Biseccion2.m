@@ -1,5 +1,5 @@
 function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
-   % Ejercicio 2.
+   % Ejercicio 1.5.
     if f(a) * f(b) < 0
         
         DATA.length = 1; % Inicializamos el contador de "objetos" (y a su vez definimos el objeto padre DATA).
