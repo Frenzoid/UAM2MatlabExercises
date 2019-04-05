@@ -14,7 +14,7 @@ function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
             h = h / 2;
 
             if f(c) == 0 % Si nos topamos con 0 (valor exacto), entonces ya hemos acabado.
-                DATA.length(i) = i; % cantidad de objetos.   
+                DATA.length = i; % cantidad de objetos.   
                 DATA.a(i) = a; % valor de inicio del intervalo en esta iteracion.
                 DATA.b(i) = b; % valor de final del intervalo en esta iteracion.
                 DATA.c(i) = c; % valor de c.
@@ -31,7 +31,7 @@ function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
             end
 
             
-            DATA.length(i) = i; % cantidad de objetos.
+            DATA.length = i; % cantidad de objetos.
             DATA.a(i) = a; % valor de inicio del intervalo en esta iteracion.
             DATA.b(i) = b; % valor de final del intervalo en esta iteracion.
             DATA.c(i) = c; % valor de c.
