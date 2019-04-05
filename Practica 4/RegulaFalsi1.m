@@ -1,5 +1,5 @@
 function outputValue = RegulaFalsi1(f, a, b, tolerancia, errorfun, maxiter)
-    % Ejemplo.
+    % Ejercicio 3.
     
     if f(a) * f(b) < 0 % Comprueba si la funcion converge dentro del intervalo.
 
