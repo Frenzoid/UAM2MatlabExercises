@@ -11,21 +11,23 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
     if f(a) * f(b) < 0 % Comprueba si la funcion converge dentro del intervalo.
         
         i = 1; % Contador de iteradores.
-        rango = abs(b - a); % rango del intervalo. ('h' en los apuntes.)
+        h = abs(b - a); % rango del intervalo. ( lo usamremos para calcular el error del rango ).
         c = (a + b) / 2; % Inicializamos 'c' para poder usarlo en la condicion (porque matlab no soporta do...while).
         
         % Condicion de salida.
         % Mientras que f(x) no sea menor o igual a errorfun introducido, Y 
-        % Mientras que el rango no sea menor o igual a la tolerancia introducida, Y 
+        % Mientras que el error del rango no sea menor o igual a la tolerancia introducida, Y 
         % Mientras que las iteraciones sean menores que 4, Y 
         % Mientras que las iteraciones sean menores que maxiter,
         % continuamos el bucle.
         
-        while ~(abs(f(c)) <= errorfun) && ~(rango <= tolerancia) && i < maxiter && i < 4
+        while ~(abs(f(c)) <= errorfun) && ~(h <= tolerancia) && i < maxiter && i < 4
 
             c = (a + b) / 2; % Por cada iteracion, actualizamos el punto de enmedio.
-            rango = abs(b - a) / 2; % Por cada iteracion, actualizamos el rango.
+            h = h / 2; % Por cada iteracion, actualizamos el error.
 
+            if f(c) == 0 % Si nos topamos con 0 (valor exacto), entonces ya hemos acabado.
+                break;
             
             if f(a) * f(b) < 0 % Si el resultado es menor que 0, la convergencia esta en la primera mitad del intervalo. De a hasta la mitad de a y b).
                 b = c;         %  si no es 0, la convergencia esta en la segunda mitad del intervalo. De la mitad de a y b hasta b.
