@@ -30,11 +30,13 @@ function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
             i = i + 1;
         end
                
+        % Cabeza de la tablita (solo se imprime una vez).
         disp('------------------------------------------');
         fprintf('| i |   a  |   c  |   b  |   (b-a)/2  | \n', i, a, c, b, rango); 
         disp('------------------------------------------');
         
         for i = 1:DATA.length
+            % Cuerpo de la tablita (se imprime por cada iteracion).
             fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, rango);         
         end
         
