@@ -1,5 +1,5 @@
 function outputValue = Biseccion(f, a, b, tolerancia, errorfun, maxiter)
-   
+   % Ejercicio 2.
     if f(a) * f(b) < 0
         
         DATA.length = 1; % Inicializamos el contador de "objetos" (y a su vez definimos el objeto padre DATA).
@@ -34,7 +34,7 @@ function outputValue = Biseccion(f, a, b, tolerancia, errorfun, maxiter)
         fprintf('| i |   a  |   c  |   b  |   (b-a)/2  | \n', i, a, c, b, rango); 
         disp('------------------------------------------');
         
-        for i = 1:length(DATA.length)
+        for i = 1:DATA.length
             fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, rango);         
         end
         
@@ -43,4 +43,3 @@ function outputValue = Biseccion(f, a, b, tolerancia, errorfun, maxiter)
         disp('Intervalo no valido');
     end
 end
-
