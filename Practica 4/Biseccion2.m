@@ -1,4 +1,4 @@
-function outputValue = Biseccion(f, a, b, tolerancia, errorfun, maxiter)
+function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
    % Ejercicio 2.
     if f(a) * f(b) < 0
         
