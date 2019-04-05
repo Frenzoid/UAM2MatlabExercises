@@ -1,4 +1,4 @@
-function outputValue = Secante1(f, a, b, tolerancia, errorfun, maxiter)
+function outputValue = Secant1(f, a, b, tolerancia, errorfun, maxiter)
     % Ejercicio 3.
            
         i = 1;
