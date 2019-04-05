@@ -28,6 +28,7 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
 
             if f(c) == 0 % Si nos topamos con 0 (valor exacto), entonces ya hemos acabado.
                 break;
+            end
             
             if f(a) * f(b) < 0 % Si el resultado es menor que 0, la convergencia esta en la primera mitad del intervalo. De a hasta la mitad de a y b).
                 b = c;         %  si no es 0, la convergencia esta en la segunda mitad del intervalo. De la mitad de a y b hasta b.
