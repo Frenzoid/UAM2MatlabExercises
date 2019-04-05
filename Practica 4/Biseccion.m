@@ -1,4 +1,6 @@
 function outputValue = Biseccion(f, a, b, tolerancia, errorfun, maxiter)
+    % Ejercicio 1.
+    
     % outputValue: Variable de salida.
     % f: funcion a procesar.
     % a: inicio del intervalo.
