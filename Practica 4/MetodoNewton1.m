@@ -6,11 +6,11 @@ function outputValue = Secant1(f, a, b, tolerancia, errorfun, maxiter)
         c = a - h;
        
         while ~(abs(f(c)) <= errorfun) && ~(h <= tolerancia) && i < maxiter && i < 4
-
-            i:=i+1
+            
             h = f(a) / diff(f(a));
             c = a - h;
             a = c;    
+            i = i + 1;
         
         end
         
