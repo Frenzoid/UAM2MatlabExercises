@@ -14,7 +14,13 @@ function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
             h = h / 2;
 
             if f(c) == 0 % Si nos topamos con 0 (valor exacto), entonces ya hemos acabado.
-                addToStruct(a, b, c, i, h);
+                DATA.length(i) = i; % cantidad de objetos.   
+                DATA.a(i) = a; % valor de inicio del intervalo en esta iteracion.
+                DATA.b(i) = b; % valor de final del intervalo en esta iteracion.
+                DATA.c(i) = c; % valor de c.
+                DATA.i(i) = i; % valor del contador.
+                DATA.h(i) = h; % valor del rango.
+   
                 break
             end
             
@@ -23,15 +29,21 @@ function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
             else
                 a = c;
             end
+
             
-            addToStruct(a, b, c, i, h);
+            DATA.length(i) = i; % cantidad de objetos.
+            DATA.a(i) = a; % valor de inicio del intervalo en esta iteracion.
+            DATA.b(i) = b; % valor de final del intervalo en esta iteracion.
+            DATA.c(i) = c; % valor de c.
+            DATA.i(i) = i; % valor del contador.
+            DATA.h(i) = h; % valor del rango.
             
             i = i + 1;
         end
                
         % Cabeza de la tablita (solo se imprime una vez).
         disp('------------------------------------------');
-        fprintf('| i |   a  |   c  |   b  |   (b-a)/2  | \n', i, a, c, b, rango); 
+        fprintf('| i |   a  |   c  |   b  |   (b-a)/2  | \n', i, a, c, b, h); 
         disp('------------------------------------------');
         
         for i = 1:DATA.length
@@ -43,15 +55,4 @@ function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
     else
         disp('Intervalo no valido');
     end
-end
-
-function void = addToStruct(aval, bval, cval, ival, hval)
-
-   DATA.a(i) = aval; % valor de inicio del intervalo en esta iteracion.
-   DATA.b(i) = bval; % valor de final del intervalo en esta iteracion.
-   DATA.c(i) = cval; % valor de c.
-   DATA.i(i) = ival; % valor del contador.
-   DATA.h(i) = hval;  % valor del rango.
-   DATA.length = DATA.length + 1; % incrementamos la cantidad de datos.
-
 end
