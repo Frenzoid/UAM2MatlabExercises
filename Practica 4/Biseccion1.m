@@ -20,7 +20,7 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
         % Mientras que las iteraciones sean menores que 4, Y 
         % Mientras que las iteraciones sean menores que maxiter,
         % continuamos el bucle.
-        
+
         while ~(abs(f(c)) <= errorfun) && ~(h <= tolerancia) && i < maxiter && i < 4
 
             c = (a + b) / 2; % Por cada iteracion, actualizamos el punto de enmedio.
@@ -36,13 +36,12 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
                 a = c;
             end
             
+            % Descomenta esto para ver los datos en detalle referente al resultado.
+            % fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, h); 
+
             i = i + 1;
         end
         
-        % Descomenta esto para ver los datos en detalle referente al resultado (ULTIMA ITERACION).
-        % fprintf('| i |   a  |   c  |   b  |   (b-a)/2  | \n', i, a, c, b, h); 
-        % disp('------------------------------------------');
-        % fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, h); 
         outputValue = c; % Devolvemos c (que seria el valor aproximado para x para que la funcion cumpla las condiciones.
     else
         disp('Intervalo no valido'); % No hay convergencia en el intervalo introducido.
