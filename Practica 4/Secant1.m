@@ -5,7 +5,6 @@ function outputValue = Secant1(f, a, b, tolerancia, errorfun, maxiter)
         h = ( f(a) * (b-a) ) / ( f(b) - f(a) );
         c = (a + b) / 2;
        
-        % arreglar abs(h) <= tolerancia.
         while ~( abs( f(c) ) <= errorfun ) && ~( abs(h) <= tolerancia ) && i < maxiter && i < 4
 
             if abs(f(a)) > abs(f(b)) % Si f(a) es mayor que f(b) intercambiamos a por b, y b por a.
