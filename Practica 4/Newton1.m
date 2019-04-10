@@ -1,19 +1,21 @@
 function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
     % Ejercicio 4.
-        % Falta arreglar
+    % Falta arreglar.
+        syms x;
+        
         if diff(f) ~= 0
             i = 1;
-            h = f(a) / diff(f(a));
+            fun = matlabFunction(f);
+            h = fun(a) / diff(fun(a));
             c = a - h;
 
-            while ~(abs(f(c)) <= errorfun) && ~(h <= tolerancia) && i < maxiter && i < 4
-                if diff(f) == 0
-                    disp(diff(f(a)));
-                    disp('No se puede continuar, no se puede dividir entre cero.');
-                    break
-                end
+            disp('------------------------------------------');
+            fprintf('| i |   a  |   c  |   b  |     h      | \n', i, a, c, b, h); 
+            disp('------------------------------------------');
+            
+            while (abs(f(c)) > errorfun) && (h > tolerancia) && (i <= maxiter)
 
-                h = f(a) / diff(f(a));
+                h = fun(a) / diff(fun(a));
                 c = a - h;
                 a = c;
                 
@@ -26,7 +28,7 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
             
             outputValue = c;
         else
-            disp(diff(f(a)));
+            disp(diff(f));
             disp('No se puede continuar, no se puede dividir entre cero.');
         end
 end
