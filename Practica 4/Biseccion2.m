@@ -1,19 +1,20 @@
 function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
    % Ejercicio 1.5.
-    if f(a) * f(b) < 0
-        
+    if (f(a) * f(b)) < 0
+ 
         DATA.length = 1; % Inicializamos el contador de "objetos" (y a su vez definimos el objeto padre DATA).
+
         i = 1; 
         h = abs(b - a);
         c = (a + b) / 2;
-       
         
-        while ~(abs(f(c)) <= errorfun) && ~(h <= tolerancia) && i <= maxiter && i <= 4
+        while (abs(f(c)) > errorfun) && (h > tolerancia) && (i <= maxiter)
 
-            c = (a + b) / 2; 
-            h = h / 2;
+            c = (a + b) / 2;
+            h = abs(b - a) / 2;
 
             if f(c) == 0 % Si nos topamos con 0 (valor exacto), entonces ya hemos acabado.
+                
                 DATA.length = i; % cantidad de objetos.   
                 DATA.a(i) = a; % valor de inicio del intervalo en esta iteracion.
                 DATA.b(i) = b; % valor de final del intervalo en esta iteracion.
@@ -24,7 +25,7 @@ function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
                 break
             end
             
-            if f(a) * f(b) < 0 
+            if (f(a) * f(c)) < 0 
                 b = c;         
             else
                 a = c;
@@ -43,7 +44,7 @@ function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
                
         % Cabeza de la tablita (solo se imprime una vez).
         disp('------------------------------------------');
-        fprintf('| i |   a  |   c  |   b  |   (b-a)/2  | \n', i, a, c, b, h); 
+        fprintf('| i |   a  |   c  |   b  |     h      | \n', i, a, c, b, h); 
         disp('------------------------------------------');
         
         for i = 1:DATA.length
