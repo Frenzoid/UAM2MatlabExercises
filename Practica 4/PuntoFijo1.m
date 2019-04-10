@@ -4,7 +4,7 @@ function outputValue = PuntoFijo1(g, c, tolerancia, maxiter)
         i = 1;
         h = tolerancia + 1; % lo inicializamos con un valor para que entre en el bucle.
        
-        while ~( g(c) == c) && ~(abs(h) < tolerancia) && i < maxiter && i < 4
+        while ~( g(c) == c) && ~(abs(h) < tolerancia) && i <= maxiter && i <= 4
 
         c = g(c); % c ahora es el resultado de g(c).
         h = abs(c - g(c)); % calculamos la diferencia entre el valor y el resultado de la funcion.
