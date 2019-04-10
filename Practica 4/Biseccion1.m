@@ -15,10 +15,9 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
         c = (a + b) / 2; % Inicializamos 'c' para poder usarlo en la condicion (porque matlab no soporta do...while).
         
         % Condicion de salida.
-        % Mientras que f(x) no sea menor o igual a errorfun introducido, Y 
-        % Mientras que el error del rango no sea menor o igual a la tolerancia introducida, Y 
-        % Mientras que las iteraciones sean menores que 4, Y 
-        % Mientras que las iteraciones sean menores que maxiter,
+        % Mientras que f(x) sea mayor a errorfun introducido, Y 
+        % Mientras que el error del rango sea mayor a la tolerancia introducida, Y 
+        % Mientras que el contador de iteraciones sea menor o igual que maxiter,
         % continuamos el bucle.
         
         while (abs(f(c)) > errorfun) && (h > tolerancia) && (i <= maxiter)
