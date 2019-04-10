@@ -8,7 +8,7 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
     % tolerancia: distancia minima entre a y b (b - a).
     % errorfun: error minimo de la funcion (cantidad de decimales que queires que tu resultado tenga.
    
-    if f(a) * f(b) < 0 % Comprueba si la funcion converge dentro del intervalo.
+    if (f(a) * f(b)) < 0 % Comprueba si la funcion converge dentro del intervalo.
         
         i = 1; % Contador de iteradores.
         h = abs(b - a); % rango del intervalo. ( lo usamremos para calcular el error del rango ).
@@ -21,7 +21,7 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
         % Mientras que las iteraciones sean menores que maxiter,
         % continuamos el bucle.
         
-        while ~(abs(f(c)) <= errorfun) && ~(h <= tolerancia) && i <= maxiter && i <= 4
+        while (abs(f(c)) > errorfun) && (h > tolerancia) && (i <= maxiter)
 
             c = (a + b) / 2; % Por cada iteracion, actualizamos el punto de enmedio.
             h = h / 2; % Por cada iteracion, actualizamos el error.
@@ -30,7 +30,7 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
                 break;
             end
             
-            if f(a) * f(b) < 0 % Si el resultado es menor que 0, la convergencia esta en la primera mitad del intervalo. De a hasta la mitad de a y b).
+            if (f(a) * f(c)) < 0 % Si el resultado es menor que 0, la convergencia esta en la primera mitad del intervalo. De a hasta la mitad de a y b).
                 b = c;         %  si no es 0, la convergencia esta en la segunda mitad del intervalo. De la mitad de a y b hasta b.
             else
                 a = c;
