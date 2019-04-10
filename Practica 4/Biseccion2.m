@@ -8,7 +8,7 @@ function outputValue = Biseccion2(f, a, b, tolerancia, errorfun, maxiter)
         c = (a + b) / 2;
        
         
-        while ~(abs(f(c)) <= errorfun) && ~(h <= tolerancia) && i < maxiter && i < 4
+        while ~(abs(f(c)) <= errorfun) && ~(h <= tolerancia) && i <= maxiter && i <= 4
 
             c = (a + b) / 2; 
             h = h / 2;
