@@ -20,8 +20,8 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
         % Mientras que las iteraciones sean menores que 4, Y 
         % Mientras que las iteraciones sean menores que maxiter,
         % continuamos el bucle.
-
-        while ~(abs(f(c)) <= errorfun) && ~(h <= tolerancia) && i < maxiter && i < 4
+        
+        while ~(abs(f(c)) <= errorfun) && ~(h <= tolerancia) && i <= maxiter && i <= 4
 
             c = (a + b) / 2; % Por cada iteracion, actualizamos el punto de enmedio.
             h = h / 2; % Por cada iteracion, actualizamos el error.
@@ -37,7 +37,7 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
             end
             
             % Descomenta esto para ver los datos en detalle referente al resultado.
-            % fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, h); 
+            fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, h); 
 
             i = i + 1;
         end
