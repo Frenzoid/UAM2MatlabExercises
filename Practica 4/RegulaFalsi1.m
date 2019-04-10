@@ -7,7 +7,7 @@ function outputValue = RegulaFalsi1(f, a, b, tolerancia, errorfun, maxiter)
         h = ( f(a) * (b-a) ) / ( f(b) - f(a) );
         c = (a + b) / 2;
        
-        while ~( abs( f(c) ) <= errorfun ) && ~( abs(h) <= tolerancia ) && i <= maxiter && i <= 4
+        while ( abs( f(c) ) > errorfun ) && ( abs(h) > tolerancia ) && i <= maxiter
 
             if abs(f(a)) > abs(f(b)) % Si f(a) es mayor que f(b) intercambiamos a por b, y b por a.
                 bridgeVar = a; % Variable que usaremos de puente para intercambiar a y b dentro del bucle.
@@ -18,7 +18,7 @@ function outputValue = RegulaFalsi1(f, a, b, tolerancia, errorfun, maxiter)
             h = ( f(a) * (b-a) ) / ( f(b) - f(a) );
             c = a - h;
             
-            if f(a) * f(b) < 0
+            if f(a) * f(c) < 0
                 b = c; 
             else
                 a = c;
