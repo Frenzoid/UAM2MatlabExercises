@@ -36,7 +36,7 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
             end
             
             % Descomenta esto para ver los datos en detalle referente al resultado.
-            fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, h); 
+            fprintf('| %1.0f | %.2f | %.2f | %.2f |    %f    | \n', i, a, c, b, h); 
 
             i = i + 1;
         end
