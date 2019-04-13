@@ -1,11 +1,6 @@
 function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
-    % Ejercicio 4.
+    % Ejercicio 4. ESTA FUNCION RECIBE UNA EXPRESION SIMBOLICA, Y NO UNA FUNCION HANDLE.
         syms x;
-        % Esta funcion recibe una expresion y no una fun. simbolica como las demas.
-        % Para hacer la derivada usamos la expresion, para procesar un valor con 
-        %   dicha expression usamos la funcion handle que nos crea
-        %   matlabFunction(); (tambien podriamos haber usado solve con == a.
-        
         
         if diff(f) ~= 0
             i = 1;
@@ -21,7 +16,7 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
             fprintf('| i |   a  |   c  |     h      | \n', i, a, c, h); 
             disp('------------------------------------');
             
-            while (abs(fun(c)) > errorfun) && (h > tolerancia) && (i <= maxiter)
+            while (abs(fun(c)) > errorfun) && (abs(h) > tolerancia) && (i <= maxiter)
 
                 h = fun(a) / fdiffun(a);
                 c = a - h;
