@@ -24,8 +24,7 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
 
                 h = fun(a) / fdiffun(a);
                 c = a - h;
-                
-                
+                    
                 fprintf('| %1.0f | %f | %f |  %f  |  %f  |  %f  |  %f   \n', i, a, c, h, fun(a), fdiffun(a), fun(c)); 
                 
                 a = c;
