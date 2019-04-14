@@ -6,7 +6,7 @@ function outputValue = PuntoFijo1(g, c, tolerancia, maxiter)
         
         fprintf('| %1.0f | %.2f | %.2f |    %.2f    | \n', i, c, g(c), h); 
 
-        while ~( g(c) == c) && (abs(h) > tolerancia) && (i <= maxiter)
+        while ~( g(c) == c) && (abs(h) > tolerancia) && (i < maxiter)
             i = i + 1;
 
             c = g(c); % c ahora es el resultado de g(c).
