@@ -22,9 +22,9 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
             while (abs(fun(c)) > errorfun) && (abs(h) > tolerancia) && (i < maxiter)
                 i = i + 1;
 
-                h = fun(a) / fdiffun(a);
-                c = a - h;
-                    
+                h = double(fun(a) / fdiffun(a));
+                c = double(a - h);
+                
                 fprintf('| %1.0f | %f | %f |  %f  |  %f  |  %f  |  %f   \n', i, a, c, h, fun(a), fdiffun(a), fun(c)); 
                 
                 a = c;
