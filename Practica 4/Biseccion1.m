@@ -15,7 +15,7 @@ function outputValue = Biseccion1(f, a, b, tolerancia, errorfun, maxiter)
             a = c;
         end
         
-        while (abs(f(c)) > errorfun) && (h > tolerancia) && (i <= maxiter)
+        while (abs(f(c)) > errorfun) && (h > tolerancia) && (i < maxiter)
 
             i = i + 1;
             c = (a + b) / 2; 
