@@ -16,7 +16,7 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
             fprintf('| i |   a  |   c  |     h      | \n', i, a, c, h); 
             disp('------------------------------------');
             
-            while (abs(fun(c)) > errorfun) && (abs(h) > tolerancia) && (i <= maxiter)
+            while (abs(fun(c)) > errorfun) && (abs(h) > tolerancia) && (i < maxiter)
 
                 h = fun(a) / fdiffun(a);
                 c = a - h;
