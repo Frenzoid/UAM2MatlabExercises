@@ -1,5 +1,5 @@
 function outputValue = RegulaFalsi1(f, a, b, tolerancia, errorfun, maxiter)
-    % Ejercicio 2.
+    % Ejercicio 3. IGUAL QUE SECANTE PERO ENVEZ DE B = C, SE APLICA BOLZANO.
            
         i = 1;
         
