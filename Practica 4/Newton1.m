@@ -2,8 +2,8 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
     % Ejercicio 4.
         syms x;
         
-        
         i = 1;
+        
         fun = matlabFunction(f); % Transforma una expresion a una funcion handle.
 
         fdiff = diff(f);
