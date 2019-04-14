@@ -3,30 +3,34 @@ function outputValue = Secant1(f, a, b, tolerancia, errorfun, maxiter)
            
         i = 1;
         
-        h = ( f(a) * (b-a) ) / ( f(b) - f(a) );
-        c = (a + b) / 2;
-        
-        fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, h); 
-       
         if abs(f(a)) > abs(f(b)) % Si f(a) es mayor que f(b) intercambiamos a por b, y b por a.
             bridgeVar = a; % Variable que usaremos de puente para intercambiar a y b dentro del bucle.
             a = b;
             b = bridgeVar;
         end
         
+        h = ( f(a) * (b-a) ) / ( f(b) - f(a) );
+        c = a - h;
+        b = c;
+
+        fprintf('| %1.0f | %f | %f | %f | %f | %f | %f | %f | \n', i, a, b, c, h, f(a), f(b), f(c));
+       
+
+        
         while ( abs( f(c) ) > errorfun ) && ( abs(h) > tolerancia ) && (i < maxiter)
             i = i + 1;
-
-            h = ( f(a) * (b-a) ) / ( f(b) - f(a) );
-            c = (a + b) / 2;
-
-            fprintf('| %1.0f | %.2f | %.2f | %.2f |    %.2f    | \n', i, a, c, b, h); 
 
             if abs(f(a)) > abs(f(b))
                 bridgeVar = a;
                 a = b;
                 b = bridgeVar;
             end
+            
+            h = ( f(a) * (b-a) ) / ( f(b) - f(a) );
+            c = a - h;
+            b = c;
+
+            fprintf('| %1.0f | %f | %f | %f | %f | %f | %f | %f | \n', i, a, b, c, h, f(a), f(b), f(c));
             
         end
         
