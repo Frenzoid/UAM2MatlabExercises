@@ -15,18 +15,17 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
             disp('-------------------------------------------------------------------------------');
             fprintf('| i |     a    |     c    |     h     |    f(a)    |    f"(a)   |    f(c)    | \n', i, a, c, h, fun(a), fdiffun(a), fun(c)); 
             disp('-------------------------------------------------------------------------------');
-            
+            fprintf('| %1.0f | %f | %f |  %f  |  %f  |  %f  |  %f   \n', i, a, c, h, fun(a), fdiffun(a), fun(c)); 
+
             while (abs(fun(c)) > errorfun) && (abs(h) > tolerancia) && (i <= maxiter)
+                i = i + 1;
 
                 h = fun(a) / fdiffun(a);
                 c = a - h;
                 a = c;
                 
-                % Descomenta esto para ver los datos en detalle referente al resultado (ULTIMA ITERACION).
                 fprintf('| %1.0f | %f | %f |  %f  |  %f  |  %f  |  %f   \n', i, a, c, h, fun(a), fdiffun(a), fun(c)); 
                 
-                i = i + 1;
-
             end
             
             outputValue = c;
