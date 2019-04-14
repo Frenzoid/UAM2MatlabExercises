@@ -1,5 +1,6 @@
-function outputValue = Secant1(f, a, b, tolerancia, errorfun, maxiter)
+function outputValue = RegulaFalsi1(f, a, b, tolerancia, errorfun, maxiter)
     % Ejercicio 3.
+         % La unica diferencia entre secante y regula falsi es que en lugar de poner b = c; pones la regla de Bolzano.
            
         i = 1;
         
