@@ -1,5 +1,5 @@
 function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
-    % Ejercicio 4. ESTA FUNCION RECIBE UNA EXPRESION SIMBOLICA, Y NO UNA FUNCION HANDLE.
+    % Ejercicio 4.
         syms x;
         
         if diff(f) ~= 0
@@ -17,6 +17,7 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
             disp('------------------------------------');
             
             while (abs(fun(c)) > errorfun) && (abs(h) > tolerancia) && (i <= maxiter)
+                i = i + 1;
 
                 h = fun(a) / fdiffun(a);
                 c = a - h;
@@ -25,7 +26,6 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
                 % Descomenta esto para ver los datos en detalle referente al resultado (ULTIMA ITERACION).
                 fprintf('| %1.0f | %.2f | %.2f |    %.2f    | \n', i, a, c, h); 
                 
-                i = i + 1;
 
             end
             
