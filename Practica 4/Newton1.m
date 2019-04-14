@@ -2,13 +2,14 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
     % Ejercicio 4.
         syms x;
         
-        if diff(f) ~= 0
-            i = 1;
-            fun = matlabFunction(f); % Transforma una expresion a una funcion handle.
-            
-            fdiff = diff(f);
-            fdiffun = matlabFunction(fdiff);  % Transforma una expresion a una funcion handle.
-            
+        
+        i = 1;
+        fun = matlabFunction(f); % Transforma una expresion a una funcion handle.
+
+        fdiff = diff(f);
+        fdiffun = matlabFunction(fdiff);  % Transforma una expresion a una funcion handle.
+        
+        if fdiff(a) ~= 0
             h = fun(a) / fdiffun(a);
             c = a - h;
 
@@ -21,6 +22,12 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
             
             while (abs(fun(c)) > errorfun) && (abs(h) > tolerancia) && (i < maxiter)
                 i = i + 1;
+                
+                if (fdiffun(a) == 0)
+                    fprintf('f(%f) = %s == 0 \n', a, fdiff);
+                    disp('No se puede continuar, no se puede dividir entre cero.');
+                    return;
+                end
 
                 h = double(fun(a) / fdiffun(a));
                 c = double(a - h);
@@ -32,7 +39,7 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
             
             outputValue = c;
         else
-            disp(diff(f));
+            fprintf('f(%f) = %s == 0 \n', a, fdiff);
             disp('No se puede continuar, no se puede dividir entre cero.');
         end
 end
