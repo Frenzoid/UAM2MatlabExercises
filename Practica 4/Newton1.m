@@ -27,7 +27,7 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
                 if (fdiffun(a) == 0)
                     fprintf('f(%f) = %s == 0 \n', a, fdiff);
                     disp('No se puede continuar, no se puede dividir entre cero.');
-                    return;
+                    break
                 end
 
                 h = double(fun(a) / fdiffun(a));
