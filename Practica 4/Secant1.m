@@ -7,7 +7,7 @@ function outputValue = Secant1(f, a, b, tolerancia, errorfun, maxiter)
             bridgeVar = a; % Variable que usaremos de puente para intercambiar a y b dentro del bucle.
             a = b;
             b = bridgeVar;
-                disp('    |       A <=> B       |                     |     f(a) <=> f(b)     |');
+            disp('    |       A <=> B       |---------------------|     f(a) <=> f(b)     |');
         end
         
         h = ( f(a) * (b-a) ) / ( f(b) - f(a) );
@@ -24,7 +24,7 @@ function outputValue = Secant1(f, a, b, tolerancia, errorfun, maxiter)
                 bridgeVar = a;
                 a = b;
                 b = bridgeVar;
-                disp('    |       A <=> B       |                     |     f(a) <=> f(b)     |');
+                disp('    |       A <=> B       |---------------------|     f(a) <=> f(b)     |');
             end
             
             h = ( f(a) * (b-a) ) / ( f(b) - f(a) );
