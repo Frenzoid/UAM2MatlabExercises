@@ -1,5 +1,6 @@
 function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
-    % Ejercicio 4.
+    % Ejercicio 4. ¡¡RECIBE UNA EXPRESION SIBOLICA!!, NO UNA FUNCION HANDLE
+    % COMO LAS DEMAS
         syms x;
         
         i = 1;
@@ -14,7 +15,7 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
             c = a - h;
 
             disp('-------------------------------------------------------------------------------');
-            fprintf('| i |     a    |     c    |     h     |    f(a)    |    f"(a)   |    f(c)    | \n', i, a, c, h, fun(a), fdiffun(a), fun(c)); 
+            fprintf('| i |     a    |     c    |     h     |    f(a)    |    f"(a)   |    f(c)    | \n'); 
             disp('-------------------------------------------------------------------------------');
             fprintf('| %1.0f | %f | %f |  %f  |  %f  |  %f  |  %f   \n', i, a, c, h, fun(a), fdiffun(a), fun(c)); 
 
