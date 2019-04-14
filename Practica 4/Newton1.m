@@ -40,7 +40,7 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
             
             outputValue = c;
         else
-            fprintf('f(%f) = %s == 0 \n', a, fdiff);
+            fprintf('f"(a) = f(%f) = %s == 0 \n', a, fdiff);
             disp('No se puede continuar, no se puede dividir entre cero.');
         end
 end
