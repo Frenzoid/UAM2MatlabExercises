@@ -1,5 +1,5 @@
 function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
-    % Ejercicio 4. ¡¡RECIBE UNA EXPRESION SIBOLICA!!, NO UNA FUNCION HANDLE
+    % Ejercicio 4. ¡¡RECIBE UNA EXPRESION SIMBOLICA!!, NO UNA FUNCION HANDLE
     % COMO LAS DEMAS
         syms x;
         
