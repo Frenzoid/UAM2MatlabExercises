@@ -10,7 +10,7 @@ function outputValue = Newton1(f, a, tolerancia, errorfun, maxiter)
         fdiff = diff(f);
         fdiffun = matlabFunction(fdiff);  % Transforma una expresion a una funcion handle.
         
-        if fdiff(a) ~= 0
+        if fdiffun(a) ~= 0
             h = fun(a) / fdiffun(a);
             c = a - h;
 
