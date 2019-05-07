@@ -11,7 +11,7 @@ function outputValue = Steffesen(f, a, tolerancia, errorfun, maxiter)
     disp('----------------------------');
 
     while (abs(f(c)) > errorfun) && (h > tolerancia) && (i < maxiter)
-
+        i = i + 1;
         c = c - h(c);
         h = hfun(c);
 
