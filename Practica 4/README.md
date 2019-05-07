@@ -1,5 +1,5 @@
 # Ejercicios y ejemplos de la practica 4.
-## (Metodos de resolucion de ecuaciones).
+## (Métodos de resolucion de ecuaciones).
 --------------------
 # ATENCIÓN
 - Todas las funciones (a excepto de Newton y Gradiante) reciben una funcion handle como parametro de entrada.
