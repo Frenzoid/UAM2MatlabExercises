@@ -13,7 +13,7 @@ function outputValue = Secant1(f, a, b, tolerancia, errorfun, maxiter)
     h = ( f(a) * (b-a) ) / ( f(b) - f(a) );
     c = a - h;
 
-    fprintf('| %1.0f | %f | %f | %f | %f | %f | %f | %f | \n', i, a, b, c, h, f(a), f(b), f(c));
+    fprintf('| %1.0f | %f | %f | %f | %f | %f | %f | %f |   \n', i, a, b, c, h, f(a), f(b), f(c));
 
     b = c;
 
