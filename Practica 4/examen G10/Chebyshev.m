@@ -11,8 +11,8 @@ function [datos, raiz] = Chebyshev(expression, a, tolerancia, maxiter)
     datosEnProceso.length = i;
     datosEnProceso.i(i) = i;
     
-    c = a - (fun(a)/fun1(a)) * (1 + ((fun(a) * fun2(a)) / 2 * (fun1(a))^2));
-    h = abs(c - a);
+    h = (fun(a)/fun1(a)) * (1 + ((fun(a) * fun2(a)) / 2 * (fun1(a))^2));
+    c = a - h;
     
     datosEnProceso.a(i) = c;
     datosEnProceso.fa(i) = fun(a);
@@ -28,8 +28,8 @@ function [datos, raiz] = Chebyshev(expression, a, tolerancia, maxiter)
         datosEnProceso.length = i;
         datosEnProceso.i(i) = i;
 
-        c = a - (fun(a)/fun1(a)) * (1 + ((fun(a) * fun2(a)) / 2 * (fun1(a))^2));
-        h = abs(c - a);
+        h = (fun(a)/fun1(a)) * (1 + ((fun(a) * fun2(a)) / 2 * (fun1(a))^2));
+        c = a - h;
 
         datosEnProceso.a(i) = c;
         datosEnProceso.fa(i) = fun(a);
