@@ -15,7 +15,7 @@ function outputValue = difdiv(x,y)
        disp(cantFilas)
        
        for fila = 1 : cantFilas
-          
+         
            tabla(fila, col + 1) = tabla(fila + 1, col) - tabla(fila, col) / x(fila + 1) - x(fila);
            
        end
