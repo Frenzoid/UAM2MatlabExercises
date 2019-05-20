@@ -1,5 +1,5 @@
 function outputValue = difdiv(x,y)
-    % sin acabar.
+    % Falta Revisar.
     if length(x) ~= length(y)
         disp("x e y no tienen la misma longitud");
         outputValue = nan;
