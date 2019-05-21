@@ -28,4 +28,3 @@ function outputValue = difdiv(x,y)
     outputValue = tabla;
 
 end
-
