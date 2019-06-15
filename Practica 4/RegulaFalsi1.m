@@ -3,7 +3,7 @@ function outputValue = RegulaFalsi1(f, a, b, tolerancia, errorfun, maxiter)
            
     i = 1;
 
-     if abs(f(a)) > abs(f(b)) % Si f(a) es mayor que f(b) intercambiamos a por b, y b por a.
+    if abs(f(a)) > abs(f(b)) % Si f(a) es mayor que f(b) intercambiamos a por b, y b por a.
         bridgeVar = a; % Variable que usaremos de puente para intercambiar a y b dentro del bucle.
         a = b;
         b = bridgeVar;
