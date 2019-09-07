@@ -4,7 +4,7 @@
 ---------------------
 - No dudes en preguntarme cualquier cosa, a mi [email](mailto:frenzoid@protonmail.com) o via [Steam](https://steamcommunity.com/id/MrFren/).
 
-![Arrays start at 1](https://pbs.twimg.com/media/DsTtemyXoAIcnFj.jpg)
+![Arrays start at 1](https://raw.githubusercontent.com/Frenzoid/UAM2MatlabExercises/master/Screenshot_20190907-054134.png)
 ---------------------
 - Huevos de pascua:
   - why: Genera "porques" aleatorios.
